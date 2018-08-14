@@ -1,0 +1,189 @@
+---
+layout: prototype
+search: false
+primary-nav: true
+secondary-nav: true
+language-switch: true
+footer: true
+---
+
+<style>
+li.breadcrumb__item, li.breadcrumb__item a  {
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 0;
+}
+
+.prototype .breadcrumb__item {
+  display: none;
+}
+
+.prototype .breadcrumb__item:nth-last-child(2) {
+  display: inline;
+  background-image: url(../assets/img/chevron-icon-left.svg);
+}
+
+@media (min-width: 768px) {
+  .prototype .breadcrumb__item {
+    display: inline;
+  }
+  .prototype .breadcrumb__item:nth-last-child(2) {
+    background-image: url(../assets/img/chevron-icon.svg);
+  }
+}
+
+.prototype .attribute-list-item {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+
+  .attribute-list-item {
+    display: flex;
+    line-height: 1.4;
+  }
+
+  .attribute-list-item--name {
+    flex: 1;
+    max-width: 8em;
+  }
+
+  .attribute-list-item--description {
+    flex: 1;
+    align-self: flex-end;
+  }
+
+}
+
+</style>
+
+<main id="main" role="main" tabindex="-1" class="prototype">
+
+  <div class="wrapper">
+    <div class="col-wrap">
+      <div class="col">
+
+        <nav aria-label="breadcrumb" role="navigation">
+          <div class="breadcrumb print--hide">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="https://www.ons.gov.uk/">Home</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="#">Population Estimates for UK, England and Wales, Scotland and Northern Ireland</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="#">Time series</a>
+              </li>
+              <li class="breadcrumb__item">
+                Filter options
+              </li>
+
+            </ol>
+          </div>
+        </nav>
+
+        <h1 class="margin-bottom--3 margin-top--3">
+          Filter options
+        </h1>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="adjust-font-size--16">
+    <div class="page-content link-adjust">
+      <div class="wrapper padding-right-sm--0 padding-left-sm--0">
+        <div id="options-info" class="col-wrap">
+          <div class="col">
+            <div class="col col--md-47 col--lg-59 margin-top--2 margin-bottom--4 background--gallery">
+              <ul class="list--neutral filter-overview">
+                <li class="margin-left--0 padding-bottom--5 padding-top--2 padding-right--2 width-lg--56">
+                  <a class="float-el--right-md float-el--right-sm float-el--right-lg" href="#">Clear filters</a>
+                </li>
+                <li id="filter-option" class="white-background margin-left-md--1 margin-right-md--2 margin-right-sm--1 margin-left-sm--1 margin-bottom--2 filter-overview__add">
+                  <div class="col--lg-56 min-height--10 padding-left-sm--0 padding-left-md--1">
+                    <div class="col col--md-8 col--lg-8 min-height--4">
+                      <a class="filter-overview__link--add" href="#"><span class="dimension-button btn btn--tertiary margin-left-md--2 margin-left-sm--1  font-weight-700 ">Add <span class="visuallyhidden">Age</span></span></a>
+                    </div>
+                    <div class="dimension-name col col--md-11 col--lg-14 margin-left-sm--6 height-sm--3 height-md--6 overflow--hidden margin-top-md--3 margin-bottom-sm--2"><strong><span id="filter-option-label" class="font-size-16">Age</span></strong></div>
+                    <div id="number-added-age" class="col col--md-20 col--lg-30">
+                      <div class="font-size--16 height-sm--3 height-md--10 nowrap-sm vertical-align-middle margin-left-sm--4 list--ellipses-sm overflow--hidden">
+                        <div class="height-sm--3 max-height-md--9 vertical-align-middle__contents--md list--ellipses-md">
+                          <ul class="list list--pipe-seperated list--pipe-seperated-ellipses">
+                            <span>Nothing added</span>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="filter-option" class="white-background margin-left-md--1 margin-right-md--2 margin-right-sm--1 margin-left-sm--1 margin-bottom--2 filter-overview__edit">
+                  <div class="col--lg-56 min-height--10 padding-left-sm--0 padding-left-md--1">
+                    <div class="col col--md-8 col--lg-8 min-height--4">
+                      <a class="filter-overview__link--edit" href="#"><span class="dimension-button margin-left-md--3 margin-left-sm--2  font-weight-700 ">Edit <span class="visuallyhidden">by Geographic Areas</span></span></a>
+                    </div>
+                    <div class="dimension-name col col--md-11 col--lg-14 margin-left-sm--6 height-sm--3 height-md--6 overflow--hidden margin-top-md--3 margin-bottom-sm--2"><strong><span id="filter-option-label" class="font-size-16">Geographic Areas</span></strong></div>
+                    <div id="number-added-geographic-areas" class="col col--md-20 col--lg-30">
+                      <div class="font-size--16 height-sm--3 height-md--10 nowrap-sm vertical-align-middle margin-left-sm--4 list--ellipses-sm overflow--hidden">
+                        <div class="height-sm--3 max-height-md--9 vertical-align-middle__contents--md list--ellipses-md">
+                          <ul class="list list--pipe-seperated list--pipe-seperated-ellipses">
+                            <span>1 added:</span>
+                            <li>Bolton</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="filter-option" class="white-background margin-left-md--1 margin-right-md--2 margin-right-sm--1 margin-left-sm--1 margin-bottom--2 filter-overview__edit">
+                  <div class="col--lg-56 min-height--10 padding-left-sm--0 padding-left-md--1">
+                    <div class="col col--md-8 col--lg-8 min-height--4">
+                      <a class="filter-overview__link--edit" href="#"><span class="dimension-button margin-left-md--3 margin-left-sm--2  font-weight-700 ">Edit <span class="visuallyhidden">by Sex</span></span></a>
+                    </div>
+                    <div class="dimension-name col col--md-11 col--lg-14 margin-left-sm--6 height-sm--3 height-md--6 overflow--hidden margin-top-md--3 margin-bottom-sm--2"><strong><span id="filter-option-label" class="font-size-16">Sex</span></strong></div>
+                    <div id="number-added-sex" class="col col--md-20 col--lg-30">
+                      <div class="font-size--16 height-sm--3 height-md--10 nowrap-sm vertical-align-middle margin-left-sm--4 list--ellipses-sm overflow--hidden">
+                        <div class="height-sm--3 max-height-md--9 vertical-align-middle__contents--md list--ellipses-md">
+                          <ul class="list list--pipe-seperated list--pipe-seperated-ellipses">
+                            <span>1 added:</span>
+                            <li>All</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="filter-option" class="white-background margin-left-md--1 margin-right-md--2 margin-right-sm--1 margin-left-sm--1 margin-bottom--2 filter-overview__edit">
+                  <div class="col--lg-56 min-height--10 padding-left-sm--0 padding-left-md--1">
+                    <div class="col col--md-8 col--lg-8 min-height--4">
+                      <a class="filter-overview__link--edit" href="#"><span class="dimension-button margin-left-md--3 margin-left-sm--2  font-weight-700 ">Edit <span class="visuallyhidden">by Time</span></span></a>
+                    </div>
+                    <div class="dimension-name col col--md-11 col--lg-14 margin-left-sm--6 height-sm--3 height-md--6 overflow--hidden margin-top-md--3 margin-bottom-sm--2"><strong><span id="filter-option-label" class="font-size-16">Time</span></strong></div>
+                    <div id="number-added-time" class="col col--md-20 col--lg-30">
+                      <div class="font-size--16 height-sm--3 height-md--10 nowrap-sm vertical-align-middle margin-left-sm--4 list--ellipses-sm overflow--hidden">
+                        <div class="height-sm--3 max-height-md--9 vertical-align-middle__contents--md list--ellipses-md">
+                          <ul class="list list--pipe-seperated list--pipe-seperated-ellipses">
+                            <span>1 added:</span>
+                            <li>2016</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class=" padding-bottom--2 padding-left--2 padding-top--2">
+                <div class="filter-overview__error-container" id="error-container"></div>
+                <form>
+                  <input id="preview-download" type="submit" value="Apply filters" class="btn btn--primary  btn--thick btn--wide btn--big btn--focus margin-right--2 font-weight-700 font-size--17 btn--primary-disabled" name="preview-and-download">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+</main>
