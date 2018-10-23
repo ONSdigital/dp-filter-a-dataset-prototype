@@ -23,8 +23,6 @@
     color: #D0D2D3; }
   .prototype .font-color--iron-light {
     color: #E5E6E7; }
-  .prototype .background--white {
-    border: 1px solid #DDDDDD; }
   .prototype body, .prototype h1, .prototype h2, .prototype h3, .prototype h4, .prototype h5, .prototype h6, .prototype p, .prototype blockquote, .prototype pre, .prototype hr, .prototype dl, .prototype dd, .prototype ol, .prototype ul, .prototype figure {
     margin: 0;
     padding: 0; }
@@ -56,8 +54,8 @@
     padding-left: 16px; }
   .prototype li {
     margin: 0;
-    padding: 0;
-    padding-bottom: 8px; }
+    margin-top: 8px;
+    margin-bottom: 8px; }
   .prototype dl {
     padding-left: 0; }
   .prototype dt, .prototype dd {
@@ -76,12 +74,15 @@
   .prototype .heading-xlarge,
   .prototype h1 {
     font-size: 32px;
-    line-height: 1.3; }
+    line-height: 40px;
+    margin: 16px 0 24px 0; }
     @media (min-width: 768px) {
       .prototype .font-xlarge,
       .prototype .heading-xlarge,
       .prototype h1 {
-        font-size: 38px; } }
+        font-size: 38px;
+        margin: 32px 0 32px 0;
+        line-height: 48px; } }
   .prototype .font-large,
   .prototype .heading-large,
   .prototype h2 {
@@ -103,12 +104,16 @@
   .prototype .font-small,
   .prototype .heading-small,
   .prototype h4 {
-    font-size: 16px; }
+    font-size: 16px;
+    margin: 16px 0 16px 0;
+    line-height: 24px; }
     @media (min-width: 768px) {
       .prototype .font-small,
       .prototype .heading-small,
       .prototype h4 {
-        font-size: 20px; } }
+        font-size: 18px;
+        margin: 24px 0 16px 0;
+        line-height: 32px; } }
   .prototype .font-xsmall,
   .prototype .heading-xsmall,
   .prototype h5 {
@@ -260,38 +265,50 @@
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #323132; }
-  .prototype .breadcrumb {
-    border-bottom: none;
-    padding: 0; }
   .prototype .breadcrumb__list {
     padding-left: 0;
     margin-top: 16px;
     margin-bottom: 16px; }
-  .prototype .breadcrumb__item {
+  .prototype .breadcrumb__item, .prototype .breadcrumb__item__white {
+    display: none;
     background-image: url(../assets/img/chevron-icon.svg);
     background-size: 12px 14px;
     background-repeat: no-repeat;
-    background-position: left 30%;
-    padding-top: 0;
-    padding-left: 1em;
-    padding-right: 0.5em;
-    line-height: 1.2;
-    display: inline; }
+    background-position: left center;
+    padding-left: 16px;
+    padding-bottom: 7px;
+    line-height: 24px;
+    margin-right: 2px; }
+  .prototype .breadcrumb__item__white {
+    background-image: url(../assets/img/chevron-icon-white.svg); }
+  .prototype .breadcrumb__item:nth-last-child(2), .prototype .breadcrumb__item__white:nth-last-child(2) {
+    display: inline;
+    background-image: url(../assets/img/chevron-icon-white-left.svg); }
+  .prototype .breadcrumb {
+    border-bottom: none;
+    padding: 0; }
+    .prototype .breadcrumb li {
+      font-size: 14px; }
+    .prototype .breadcrumb a {
+      font-size: 14px; }
   @media (min-width: 768px) {
-    .prototype .breadcrumb__item {
-      background-position: left 25%; } }
-  .prototype .breadcrumb__item:first-child {
-    background: none;
-    padding-left: 0; }
-  .prototype .breadcrumb__item:first-child::after {
-    content: "…"; }
-  .prototype .breadcrumb__item:nth-child(2) {
-    background: none;
-    padding-left: 0; }
-  .prototype .breadcrumb__item::after {
-    content: none; }
-  .prototype .breadcrumb__item a:hover {
-    text-decoration: underline; }
+    .prototype .breadcrumb__item, .prototype .breadcrumb__item__white {
+      display: inline;
+      background-position: right center;
+      padding-right: 16px;
+      padding-left: 0; }
+    .prototype .breadcrumb__item::after {
+      content: none; }
+    .prototype .breadcrumb__item__white:nth-last-child(2) {
+      display: inline;
+      background-image: url(../assets/img/chevron-icon-white.svg); }
+    .prototype .breadcrumb__item:nth-last-child(2) {
+      display: inline;
+      background-image: url(../assets/img/chevron-icon.svg); }
+    .prototype .breadcrumb__item:last-child {
+      background-image: none; }
+    .prototype .breadcrumb__item__white:last-child {
+      background-image: none; } }
   .prototype .meta-v2.meta-wrap {
     background: none;
     border-top: none;
