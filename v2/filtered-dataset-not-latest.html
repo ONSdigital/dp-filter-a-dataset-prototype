@@ -1,0 +1,75 @@
+---
+layout: prototype
+search: true
+primary-nav: true
+secondary-nav: true
+language-switch: true
+footer: false
+title: "Filtered dataset"
+
+---
+
+<main id="main" role="main" tabindex="-1" class="prototype">
+
+<div class="page-intro background--white">
+
+  <div class="wrapper">
+    <div class="col-wrap">
+      <div class="col">
+        <nav>
+          <div class="breadcrumb">
+            <ol class="breadcrumb__list margin-bottom--0">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="#">Home</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="dataset-not-latest">Population estimates for UK, England and Wales, Scotland and Northern Ireland</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="filter-options-not-latest">Filter options</a>
+              </li>
+              <li class="breadcrumb__item">
+                {{ page.title }}
+              </li>
+            </ol>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-intro background--white">
+  <div class="wrapper">
+    <div class="col-wrap">
+      <div class="col col--md-one col--lg-one">
+        <h1 class="margin-top-md--2 margin-bottom-sm--2 margin-bottom-md--2 margin-bottom-lg--2 padding-top--0 padding-bottom--0">{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- latest panel  -->
+  <div class="wrapper">
+    <div class="col-wrap">
+      <div class="col">
+        <div style="display: inline-block" class="print--hide margin-bottom-sm--2 margin-bottom-md--1 margin-bottom-lg--4 border-left--carrot background--gallery padding-left--1 padding-top--1 padding-bottom--1 padding-right--1">
+          <p class="font-small margin-bottom--1 margin-top--0">This is not the latest data. <a href="dataset-latest">View latest data</a></p>
+          <p class="margin-bottom--0"><a href="filter-options-latest" class="btn btn--primary btn--thick btn--focus font-weight-700 margin-bottom--1">Apply these filters to the latest data</a></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-intro background--white">
+    <div class="wrapper">
+      <div class="col-wrap">
+        <div class="col col--md-one col--lg-one">
+          <p>< <a href="filter-options-latest">Adjust filter options</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

@@ -5,7 +5,7 @@ primary-nav: true
 secondary-nav: true
 language-switch: true
 footer: false
-title: "Filter options"
+title: "Age"
 
 ---
 
@@ -23,7 +23,10 @@ title: "Filter options"
                 <a class="breadcrumb__link" href="https://www.ons.gov.uk/">Home</a>
               </li>
               <li class="breadcrumb__item">
-                <a class="breadcrumb__link" href="dataset-latest">Population estimates for UK, England and Wales, Scotland and Northern Ireland</a>
+                <a class="breadcrumb__link" href="dataset-not-latest">Population estimates for UK, England and Wales, Scotland and Northern Ireland</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="filter-options-not-latest">Filter options</a>
               </li>
               <li class="breadcrumb__item">
                 {{ page.title }}
@@ -42,25 +45,17 @@ title: "Filter options"
     <div class="col-wrap">
       <div class="col col--md-one col--lg-one">
         <h1 class="margin-top-md--2 margin-bottom-sm--2 margin-bottom-md--2 margin-bottom-lg--2 padding-top--0 padding-bottom--0">{{ page.title }}</h1>
+        <p>Ages 0 to 90 available in this dataset.</p>
+        <ul>
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+        </ul>
+        <p><a href="filter-options-not-latest" class="btn btn--primary btn--thick btn--focus font-weight-700">Save and return</a></p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="wrapper">
-  <div class="col-wrap">
-    <div class="col col--md-one col--lg-one margin-top--1">
-      <div class="background--gallery padding-top--2 padding-left--2 padding-right--2 padding-bottom--0">
-        <ul>
-          <li><a href="age-latest">Age</a></li>
-          <li><a href="#">Geographic areas</a></li>
-          <li><a href="#">Sex</a></li>
-          <li><a href="#">Time</a></li>
-        </ul>
-        <p><a href="filtered-dataset-latest" class="btn btn--primary btn--thick margin-bottom--4 btn--focus font-weight-700">Apply filters</a></p>
-      </div>
-    </div>
-  </div>
-</div>
 
 </main>

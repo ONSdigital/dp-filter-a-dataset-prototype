@@ -5,7 +5,7 @@ primary-nav: true
 secondary-nav: true
 language-switch: true
 footer: false
-title: "Filter options"
+title: "Filtered dataset"
 
 ---
 
@@ -20,10 +20,13 @@ title: "Filter options"
           <div class="breadcrumb">
             <ol class="breadcrumb__list margin-bottom--0">
               <li class="breadcrumb__item">
-                <a class="breadcrumb__link" href="https://www.ons.gov.uk/">Home</a>
+                <a class="breadcrumb__link" href="#">Home</a>
               </li>
               <li class="breadcrumb__item">
                 <a class="breadcrumb__link" href="dataset-latest">Population estimates for UK, England and Wales, Scotland and Northern Ireland</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="filter-options-latest">Filter options</a>
               </li>
               <li class="breadcrumb__item">
                 {{ page.title }}
@@ -47,17 +50,11 @@ title: "Filter options"
   </div>
 </div>
 
-<div class="wrapper">
-  <div class="col-wrap">
-    <div class="col col--md-one col--lg-one margin-top--1">
-      <div class="background--gallery padding-top--2 padding-left--2 padding-right--2 padding-bottom--0">
-        <ul>
-          <li><a href="age-latest">Age</a></li>
-          <li><a href="#">Geographic areas</a></li>
-          <li><a href="#">Sex</a></li>
-          <li><a href="#">Time</a></li>
-        </ul>
-        <p><a href="filtered-dataset-latest" class="btn btn--primary btn--thick margin-bottom--4 btn--focus font-weight-700">Apply filters</a></p>
+<div class="page-intro background--white">
+  <div class="wrapper">
+    <div class="col-wrap">
+      <div class="col col--md-one col--lg-one">
+        <p>< <a href="filter-options-latest">Adjust filter options</a></p>
       </div>
     </div>
   </div>
