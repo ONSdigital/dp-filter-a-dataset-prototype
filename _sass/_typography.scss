@@ -45,13 +45,13 @@ address,li,p,.btn, summary, dl {
 
 // Lists
 ul,ol,dl {
-  margin-bottom: $spacing-unit*4;
-  padding-left: $spacing-unit*2;
+  margin-bottom: $spacing-unit;
+  padding-left: $spacing-unit*4;
 }
 li {
   margin: 0;
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  padding: 0;
+  line-height: 1.5;
 }
 
 // Definition list

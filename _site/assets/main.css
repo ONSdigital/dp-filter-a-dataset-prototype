@@ -50,12 +50,12 @@
       .prototype address, .prototype li, .prototype p, .prototype .btn, .prototype summary, .prototype dl {
         font-size: 18px; } }
   .prototype ul, .prototype ol, .prototype dl {
-    margin-bottom: 32px;
-    padding-left: 16px; }
+    margin-bottom: 8px;
+    padding-left: 32px; }
   .prototype li {
     margin: 0;
-    margin-top: 8px;
-    margin-bottom: 8px; }
+    padding: 0;
+    line-height: 1.5; }
   .prototype dl {
     padding-left: 0; }
   .prototype dt, .prototype dd {
