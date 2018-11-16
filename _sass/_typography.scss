@@ -11,7 +11,7 @@ $spacing-unit: 8px;
 
 // Vertical rhythm
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, svg, %vertical-rhythm {
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, img, svg, %vertical-rhythm {
   margin-bottom: $spacing-unit*2;
   line-height: 1.5;
 }
@@ -21,9 +21,9 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, svg, %vertical-r
 .heading-xlarge,
 .heading-large,
 .heading-medium,
+.heading-normal,
 .heading-small,
 .heading-xsmall,
-.heading-xxsmall,
 h1,
 h2,
 h3,
@@ -34,46 +34,47 @@ h6 {
   font-weight: bold;
 }
 
+
 // Base font size
-address,li,p,.btn, summary, dl {
+
+address,li,p,dl,.btn, summary {
   font-size: 16px;
+  line-height: 24px;
   margin-bottom: $spacing-unit*4;
   @media (min-width: 768px) {
     font-size: 18px;
+    line-height: 32px;
   }
 }
 
 // Lists
-ul,ol,dl {
-  margin-bottom: $spacing-unit;
+
+ul,ol {
+  margin-bottom: $spacing-unit*4;
   padding-left: $spacing-unit*4;
 }
 li {
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
-// Definition list
-/**
- * Flexible multiline definition lists with 2 lines of CSS
- */
+// Defination lists
 
- dl {
-   padding-left: 0;
-  }
-
-dt, dd {
-  display: inline-block;
-  margin: 0;
+.definition-list__description--inline {
+  display: inline;
 }
 
-dd:after {
-	content: '\A';
-	white-space: pre;
+.definition-list__description--inline::after {
+    content: " |";
+    color: $iron;
+}
+
+.definition-list__description--inline:last-child::after {
+    content: "";
 }
 
 // Font weights
+
 .font-weight--bold {
   font-weight: bold;
 }
@@ -83,9 +84,12 @@ dd:after {
 }
 
 // Links
+
 a {
   text-decoration: underline;
 }
+
+// Headings
 
 .font-xlarge,
 .heading-xlarge,
@@ -95,8 +99,8 @@ h1 {
   margin: 16px 0 24px 0;
   @media (min-width: 768px) {
     font-size: 38px;
-    margin: 32px 0 32px 0;
     line-height: 48px;
+    margin: 32px 0 32px 0;
   }
 }
 
@@ -104,8 +108,12 @@ h1 {
 .heading-large,
 h2 {
   font-size: 24px;
+  line-height: 32px;
+  margin: 24px 0 16px 0;
   @media (min-width: 768px) {
     font-size: 30px;
+    line-height: 40px;
+    margin: 32px 0 32px 0;
   }
 }
 
@@ -113,40 +121,45 @@ h2 {
 .heading-medium,
 h3 {
   font-size: 18px;
+  line-height: 24px;
+  margin: 24px 0 16px 0;
   @media (min-width: 768px) {
     font-size: 24px;
+    line-height: 32px;
+    margin: 32px 0 32px 0;
+  }
+}
+
+.font-normal,
+.heading-normal,
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0 16px 0;
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 24px 0 16px 0;
   }
 }
 
 .font-small,
 .heading-small,
-h4 {
+small,
+h5 {
   font-size: 16px;
-  margin: 16px 0 16px 0;
   line-height: 24px;
+  margin-bottom: $spacing-unit;
   @media (min-width: 768px) {
-    font-size: 18px;
-    margin: 24px 0 16px 0;
-    line-height: 32px;
+    margin-bottom: $spacing-unit*3;
   }
 }
 
 .font-xsmall,
 .heading-xsmall,
-h5 {
-  font-size: 16px;
-  @media (min-width: 768px) {
-    font-size: 18px;
-  }
-}
-
-.font-xxsmall,
-.heading-xxsmall,
 h6 {
   font-size: 14px;
-  @media (min-width: 768px) {
-    font-size: 14px;
-  }
+  line-height: 24px;
 }
 
 // hr
@@ -154,13 +167,6 @@ h6 {
 hr {
   border: 0;
   border-bottom: 1px solid $iron;
-}
-
-// Section contents for the bulletin design sprint
-ul.section-contents {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 // panel
